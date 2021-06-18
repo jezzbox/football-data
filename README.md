@@ -11,3 +11,4 @@ constraints: Primary keys: {column_name}_pkey, foreign keys: {column_name}_fkey,
     fkey for a Foreign key
     check for a Check constraint
     seq for all sequences
+https://lucid.app/lucidchart/1789da0d-5953-4e61-89a6-76f27eb64080/view?page=0_0#
