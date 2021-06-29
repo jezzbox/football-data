@@ -1,7 +1,10 @@
 # football-data
 
-This repository will document my football-data database as well as the webscraping and cleaning I have done in Python. Web scraping code is presented as jupyter notebooks in the Notebooks folder. SQL code is in the SQL folder.
+This repository will document my football-data database as well as the webscraping and cleaning I have done in Python.
 
+
+## Web scraping / data cleaning
+All my python code will be presented as jupyter notebooks which you can find in the Notebooks folder. I will mostly be using Beautiful soup and pandas.
 
 
 ## Database
