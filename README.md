@@ -38,7 +38,7 @@ match_activity | goals, cards, set pieces including timestamp | match_attendance
 type | convention
 ------------ | -------------
 case | snake_case
-table names | sungular
+table names | singular
 primary keys | *{table_name}_pkey*
 foreign keys | *{related_table_name}_fkey*
 unique constraint | *uq_{column_name}_key*
