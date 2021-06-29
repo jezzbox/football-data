@@ -8,7 +8,7 @@ This repository will document my football-data database as well as the webscrapi
 Database: Postgres\
 Diagram: https://lucid.app/lucidchart/1789da0d-5953-4e61-89a6-76f27eb64080/view
 
-I have made this database intentionally complex to test my skills. Taking into account things such as a team possibly sharing a stadium, changing stadiums, having detail such as timestamps of goals, more than one country being eligible in a league, and contract information.\
+I have made this database intentionally complex to test my skills. Taking into account things such as a team possibly sharing a stadium, changing stadiums, having detail such as timestamps of goals, more than one country being eligible in a league, and contract information.
 
 The database will be built to accomodate multiple leagues in different countries, however I will first only be adding the last 3 seasons of the premier league.
 
