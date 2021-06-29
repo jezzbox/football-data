@@ -1,14 +1,30 @@
 # football-data
 
-Database: Postgres
-naming conventions: Databases, tables, columns: lower_case_wih_words_seperate_by_underscore
-constraints: Primary keys: {column_name}_pkey, foreign keys: {column_name}_fkey, check: {column_name}_chk
+This repository will document my football-data database as well as the webscraping and cleaning I have done in Python.
 
-    pkey for a Primary Key constraint
-    key for a Unique constraint
-    excl for an Exclusion constraint
-    idx for any other kind of index
-    fkey for a Foreign key
-    check for a Check constraint
-    seq for all sequences
-https://lucid.app/lucidchart/1789da0d-5953-4e61-89a6-76f27eb64080/view?page=0_0#
+Database: Postgres
+Diagram: https://lucid.app/lucidchart/1789da0d-5953-4e61-89a6-76f27eb64080/view?page=0_0#
+
+# football-data
+documentation for the Postgres database football-data
+
+## Tables:	
+table | description | type
+------------ | ------------- | -------------
+listings | contains all the listings and lots from the auction sites | fact
+auction_sites | unique list of auction sites in the database | dimension
+bottles | the bottles put up for auction | dimension
+dates | date table including historic exchange rate | dimension
+currencies | unique currencies | dimension
+countries | unique countries | sub dimension
+bottle_origins | origins of bottles. connects countries table to bottles table | junction table
+stg_listings | staging table for importing data | staging table
+
+## Naming conventions:
+type | convention
+------------ | -------------
+case | snake_case
+table names | sungular
+primary keys | *{table_name}_pkey*
+foreign keys | *{related_table_name}_fkey*
+unique constraint | *uq_{column_name}_key*
