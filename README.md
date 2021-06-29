@@ -6,7 +6,8 @@ This repository will document my football-data database as well as the webscrapi
 ## Web scraping / data cleaning
 All my python code will be presented as jupyter notebooks which you can find in the Notebooks folder. I will mostly be using Beautiful soup and pandas.
 
-
+## ETL Scripts
+ETL scripts will be saved in the ETL Scripts folder. I will be using psycopg2 to connect to the db with python.
 ## Database
 Database: Postgres\
 Diagram: https://lucid.app/lucidchart/1789da0d-5953-4e61-89a6-76f27eb64080/view
