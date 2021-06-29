@@ -6,19 +6,29 @@ This repository will document my football-data database as well as the webscrapi
 
 ## Database
 Database: Postgres\
-Diagram: https://lucid.app/lucidchart/1789da0d-5953-4e61-89a6-76f27eb64080/view?page=0_0#
+Diagram: https://lucid.app/lucidchart/1789da0d-5953-4e61-89a6-76f27eb64080/view
 
-### Tables:	
-table | description | type
+I have made this database intentionally complex to test my skills. Taking into account things such as a team possibly sharing a stadium, changing stadiums, having detail such as timestamps of goals, more than one country being eligible in a league, and contract information.\
+
+The database will be built to accomodate multiple leagues in different countries, however I will first only be adding the last 3 seasons of the premier league.
+
+### Tables:
+
+table | description | related table(s)
 ------------ | ------------- | -------------
-listings | contains all the listings and lots from the auction sites | fact
-auction_sites | unique list of auction sites in the database | dimension
-bottles | the bottles put up for auction | dimension
-dates | date table including historic exchange rate | dimension
-currencies | unique currencies | dimension
-countries | unique countries | sub dimension
-bottle_origins | origins of bottles. connects countries table to bottles table | junction table
-stg_listings | staging table for importing data | staging table
+country | unique countries |
+city | unique cities | country
+stadium | unique stadiums | city
+home_stadium | the stadiums home team including history | team, stadium
+league | unique leagues | 
+season | unique seasons of leagues | league
+country_eligibility | many to many relationship between leagues and countries | league, country
+team | unique teams | city
+person | unique players, managers | city
+contract | player and manager contracts, also serves to relate players to a team | person, team
+match | the matches played | team (home + away), stadium,season
+match_attendance | players who played in the match, including time sent on/off | person, team, match
+match_activity | goals, cards, set pieces including timestamp | match_attendance
 
 ### Naming conventions:
 type | convention
